@@ -18,6 +18,10 @@
 
    `$ bspatch RBX1r6-v1.01-WithCover.pdf RBX1r6-v1.01-WithCover-Fuerte.pdf electric2fuerte.diff`
 
+   The general syntax is:
+
+   `$ bspatch source_file output_file diff_file`
+
  * Bring up the new Fuerte-specific PDF in your favorite PDF reader.
 
  * Finally, don't forget to update your ROS By Example stack as some launch files have been added that are specific to Fuerte.  To update the stack, run the following commands:
