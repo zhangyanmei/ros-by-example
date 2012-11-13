@@ -14,7 +14,7 @@
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte.diff`
 
-*NOTE:* If the next set of steps produces an error, try again with the following alternative diff file:
+*Alternate Diff File:* If the next set of steps produces an error, try again with the following alternative diff file:
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte_2.diff`
 
