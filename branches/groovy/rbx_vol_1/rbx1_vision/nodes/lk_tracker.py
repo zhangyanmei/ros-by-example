@@ -132,15 +132,11 @@ class LKTracker(GoodFeatures):
             
             # If we have enough points, find the best fit ellipse around them
             if len(self.keypoints) > 6:
-                self.keypoints_matrix = cv.CreateMat(1, len(self.keypoints), cv.CV_32SC2)
-                i = 0
-                for p in self.keypoints:
-                    cv.Set2D(self.keypoints_matrix, 0, i, (int(p[0]), int(p[1])))
-                    i = i + 1           
-                track_box = cv.FitEllipse2(self.keypoints_matrix)
+                keypoints_array = np.float32([p for p in self.keypoints]).reshape(-1, 1, 2)  
+                track_box = cv2.fitEllipse(keypoints_array)
             else:
                 # Otherwise, find the best fitting rectangle
-                track_box = cv2.boundingRect(self.keypoints_matrix)
+                track_box = cv2.boundingRect(keypoints_matrix)
         except:
             track_box = None
                         

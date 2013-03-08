@@ -30,7 +30,12 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #target_link_libraries(example ${PROJECT_NAME})
 
 #add dynamic reconfigure api
-rosbuild_find_ros_package(dynamic_reconfigure)
-include(${dynamic_reconfigure_PACKAGE_PATH}/cmake/cfgbuild.cmake)
-gencfg()
+if ($ENV{ROS_DISTRO} STREQUAL "groovy")
+   find_package(catkin REQUIRED dynamic_reconfigure)
+   generate_dynamic_reconfigure_options(cfg/CalibrateAngular.cfg cfg/CalibrateLinear.cfg)
+else ($ENV{ROS_DISTRO} STREQUAL "groovy")
+   rosbuild_find_ros_package(dynamic_reconfigure)
+   include(${dynamic_reconfigure_PACKAGE_PATH}/cmake/cfgbuild.cmake)
+   gencfg()
+endif ($ENV{ROS_DISTRO} STREQUAL "groovy")
 

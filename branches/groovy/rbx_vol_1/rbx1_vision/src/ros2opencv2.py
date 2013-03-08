@@ -193,7 +193,7 @@ class ROS2OpenCV2(object):
                     self.track_box = (center, size, angle)
                 else:
                     (center, size, angle) = self.track_box   
-                    
+
                 # For face tracking, an upright rectangle looks best
                 if self.face_tracking:
                     pt1 = (int(center[0] - size[0] / 2), int(center[1] - size[1] / 2))

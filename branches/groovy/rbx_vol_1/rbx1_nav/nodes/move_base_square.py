@@ -142,7 +142,7 @@ class MoveBaseSquare():
         self.markers = Marker()
         self.markers.ns = marker_ns
         self.markers.id = marker_id
-        self.markers.type = Marker.SPHERE_LIST
+        self.markers.type = Marker.CUBE_LIST
         self.markers.action = Marker.ADD
         self.markers.lifetime = rospy.Duration(marker_lifetime)
         self.markers.scale.x = marker_scale
@@ -152,7 +152,7 @@ class MoveBaseSquare():
         self.markers.color.b = marker_color['b']
         self.markers.color.a = marker_color['a']
         
-        self.markers.header.frame_id = 'map'
+        self.markers.header.frame_id = 'odom'
         self.markers.header.stamp = rospy.Time.now()
         self.markers.points = list()
 

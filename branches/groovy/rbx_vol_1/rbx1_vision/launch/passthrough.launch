@@ -1,9 +1,15 @@
 <launch>
+
+  <arg name="pre_groovy" default="$(optenv ROS_DISTRO true)" />
+
   <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
 
   <!-- Run a passthrough filter to clean NaNs -->
   <node pkg="nodelet" type="nodelet" name="passthrough" args="load pcl/PassThrough pcl_manager" output="screen">
-    <remap from="~input" to="/camera/rgb/points" />
+    <arg if="$(arg debug)" name="launch_prefix" value="xterm -rv -e gdb -ex run -args"/>
+    <arg unless="$(arg debug)" name="launch_prefix" value=""/>
+    <remap from="~input" to="/camera/rgb/points" if="$(arg pre_groovy)" />
+    <remap from="~input" to="/camera/depth_registered/points" unless="$(arg pre_groovy)" />
     <remap from="~output" to="/passthrough" />
     <rosparam>
       filter_field_name: z

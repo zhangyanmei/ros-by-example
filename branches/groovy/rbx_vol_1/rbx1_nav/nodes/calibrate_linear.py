@@ -49,14 +49,14 @@ class CalibrateLinear():
         self.odom_linear_scale_correction = rospy.get_param('~odom_linear_scale_correction', 1.0)
         self.start_test = rospy.get_param('~start_test', True)
         
+        # Publisher to control the robot's speed
+        self.cmd_vel = rospy.Publisher('/cmd_vel', Twist)
+        
         # Fire up the dynamic_reconfigure server
         dyn_server = Server(CalibrateLinearConfig, self.dynamic_reconfigure_callback)
         
         # Connect to the dynamic_reconfigure server
         dyn_client = dynamic_reconfigure.client.Client("calibrate_linear", timeout=60)
-        
-        # Publisher to control the robot's speed
-        self.cmd_vel = rospy.Publisher('/cmd_vel', Twist)
  
         # The base frame is base_footprint for the TurtleBot but base_link for Pi Robot
         self.base_frame = rospy.get_param('~base_frame', '/base_link')
@@ -70,7 +70,7 @@ class CalibrateLinear():
         # Make sure we see the odom and base frames
         self.tf_listener.waitForTransform(self.odom_frame, self.base_frame, rospy.Time(), rospy.Duration(60.0))        
             
-        rospy.loginfo("Bring up dynamic_reconfigure to control the test.")
+        rospy.loginfo("Bring up dynamic_reconfigure or rqt_reconfigure to control the test.")
   
         self.position = Point()
         
