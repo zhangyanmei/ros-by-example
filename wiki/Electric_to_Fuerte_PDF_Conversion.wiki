@@ -10,11 +10,15 @@
 
    `$ cd directory_containing_original_pdf`
 
+There are two versions of the diff file, one for version 1.0 of the eBook and one for version 1.01.  You can find the version at the bottom of the inside title page.
+
+For Version 1.0 of the eBook:
+
  * Download the `electric2fuerte.diff` file:
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte.diff`
 
-*Alternate Diff File:* If the next set of steps produces an error, try again with the following alternative diff file:
+For Version 1.01 of the eBook:
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte_2.diff`
 
