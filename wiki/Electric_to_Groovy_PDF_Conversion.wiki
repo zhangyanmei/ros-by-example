@@ -32,5 +32,6 @@ For Version 1.01 of the eBook:
 
  * Bring up the new Groovy-specific PDF in your favorite PDF reader.
 
+ * Finally, don't forget to get the new Groovy-specific ROS By Example sample code from Github as explained in Chapter 5:
 
 *NOTE:* For future updates about the ROS By Example book and code, please join the [https://groups.google.com/forum/#%21forum/ros-by-example ros-by-example Google Group] 
