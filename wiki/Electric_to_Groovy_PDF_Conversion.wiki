@@ -10,7 +10,7 @@
 
    `$ cd directory_containing_original_pdf`
 
-There are *three* versions of the diff file, one for version 1.0 of the eBook and two for version 1.01.  Try first with the first diff file and if that does not work, try the second, then the third.
+There are *three* possible versions of the diff file, one for version 1.0 of the eBook and two for version 1.01.  Try first with the first diff file and if that does not work, try the second, then the third.
 
 For Version 1.0 of the eBook:
 
