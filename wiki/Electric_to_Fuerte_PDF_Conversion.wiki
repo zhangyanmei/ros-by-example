@@ -22,9 +22,13 @@ For Version 1.01 of the eBook:
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte_2.diff`
 
- * Use the `bspatch` utility (part of the `bsdiff` package) to apply the diff to the Electric version of the PDF.  Change the source file name if you have renamed the original PDF and change the target file name if desired. (It can be anything you want but you should keep the .pdf extension.)
+ * Use the `bspatch` utility (part of the `bsdiff` package) to apply the diff to the Electric version of the PDF.  Change the source file name if you have renamed the original PDF and change the target file name if desired. (It can be anything you want but you should keep the .pdf extension.)  The command would be either:
 
    `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte.diff`
+
+or
+
+   `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte_2.diff`
 
    The general syntax is:
 
