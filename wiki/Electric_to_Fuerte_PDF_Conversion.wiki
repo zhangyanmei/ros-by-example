@@ -38,7 +38,7 @@ and for the 1.01 version use:
 
 or
 
-   `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte_2.diff`
+   `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte_3.diff`
 
    The general syntax is:
 
