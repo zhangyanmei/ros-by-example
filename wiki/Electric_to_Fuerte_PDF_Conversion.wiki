@@ -10,7 +10,7 @@
 
    `$ cd directory_containing_original_pdf`
 
-There are two versions of the diff file, one for version 1.0 of the eBook and one for version 1.01.  You can find the version at the bottom of the inside title page.
+There are three versions of the diff file, one for version 1.0 of the eBook and two for version 1.01 (depending on when you bought the book).  You can find the version at the bottom of the inside title page.
 
 For Version 1.0 of the eBook:
 
@@ -22,9 +22,19 @@ For Version 1.01 of the eBook:
 
    `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte_2.diff`
 
- * Use the `bspatch` utility (part of the `bsdiff` package) to apply the diff to the Electric version of the PDF.  Change the source file name if you have renamed the original PDF and change the target file name if desired. (It can be anything you want but you should keep the .pdf extension.)  The command would be either:
+or
+
+   `$ wget http://ros-by-example.googlecode.com/files/electric2fuerte_3.diff`
+
+Try one and if that doesn't work, try the other.
+
+ * Use the `bspatch` utility (part of the `bsdiff` package) to apply the diff to the Electric version of the PDF.  Change the source file name if you have renamed the original PDF and change the target file name if desired. (It can be anything you want but you should keep the .pdf extension.) For the 1.0 book version use:
 
    `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte.diff`
+
+and for the 1.01 version use:
+
+   `$ bspatch ros_by_example___volume_1.pdf ros_by_example___volume_1_Fuerte.pdf electric2fuerte_2.diff`
 
 or
 
