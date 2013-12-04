@@ -18,7 +18,7 @@ To try the first diff file:
 
    `$ wget http://ros-by-example.googlecode.com/files/fuerte2groovy.diff`
 
-If the does not work when following the rest of the instructions below, then try the second diff file:
+If this does not work when following the instructions below, then try the second diff file:
 
    `$ wget http://ros-by-example.googlecode.com/files/fuerte2groovy_2.diff`
 
