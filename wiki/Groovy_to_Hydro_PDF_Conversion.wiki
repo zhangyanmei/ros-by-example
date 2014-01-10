@@ -10,7 +10,7 @@
 
    `$ cd directory_containing_original_pdf`
 
- * Download the groovy2hydro.diff` file:
+ * Download the groovy2hydro.diff file:
 
    `$ wget http://ros-by-example.googlecode.com/files/groovy2hydro.diff`
 
