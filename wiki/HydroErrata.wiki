@@ -6,7 +6,7 @@ In this section, you are instructed to add the following line to your ~/.bashrc 
 
 source ~/ros_workspace/setup.bash
 
-The missing step is that we also need to add the following line right after above line:
+The missing step is that we also need to add the following line right after the above line:
 
 export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH
 
