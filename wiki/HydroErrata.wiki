@@ -11,10 +11,3 @@ The missing step is that we also need to add the following line right after abov
 export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH
 
 This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
