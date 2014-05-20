@@ -1,0 +1,20 @@
+= Errata for ROS Hydro Book Revision =
+
+There is a missing step in section 4.7 "Mixing catkin and rosbuild Workspaces"
+
+In this section, you are instructed to add the following line to your ~/.bashrc file:
+
+source ~/ros_workspace/setup.bash
+
+The missing step is that we also need to add the following line right after above line:
+
+export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH
+
+This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
