@@ -1,0 +1,68 @@
+== RBX Volume 2 Errata for ROS Hydro ==
+
+  * In *Chapter 2* (Installing the ros-by-example Code) the wget command is missing the continuation character at the end of the line.  The command should be:
+
+{{{
+$ wget https://raw.githubusercontent.com/pirobot/rbx2/hydro-devel/rbx2-prereq.sh
+}}}
+
+  * In Section *4.12.1* a couple of command lines are missing the continuation character at the line break which means that copy-and-paste of the command to terminal window will not work.  The two commands should be:
+
+{{{
+$ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- -1.57
+}}}
+
+{{{
+$ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- 0.0
+}}}
+
+  * In Section *4.12.2* (A fake Pi Robot) in the first paragraph on page 145, there is a command missing from the text box. The missing command  is:
+
+{{{
+$ roslaunch rbx2_bringup pi_robot_with_gripper.launch sim:=true
+}}}
+
+  * In section *5.4*, two of the rostopic commands are missing the continuation character at the end of the line.  Those commands should be:
+
+{{{
+$ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- -2.0
+}}}
+
+{{{
+$ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- 0.0
+}}}
+
+  * In section *5.5*, the second roslaunch command is missing the continuation character at the end of the line.  That command should be:
+
+{{{
+$ roslaunch rbx2_bringup pi_robot_head_only.launch sim:=false port:=/dev/ttyUSB1
+}}}
+
+  * In section *11.29* (Creating a Custom Fast IK Plugin) on page 369, the following command is missing the continuation character at the end of the line break.  The command line should be:
+
+{{{
+$ rosrun moveit_ikfast round_collada_numbers.py pi_robot.dae pi_robot_rounded.dae 5
+}}}
+
+  * In Section *11.26* (Pick and Place) the rviz command is missing the continuation character at the end of the line break.  The command line should be:
+
+{{{
+$ rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/pick_and_place.rviz
+}}}
+
+  * In Section *12.8* (Testing the Kobuki Robot in Gazebo) the first 'rostopic pub' command is missing the continuation character at the end of the line break.  The command line should be:
+
+{{{
+$ rostopic pub -r 10 /mobile_base/commands/velocity geometry_msgs/Twist '{linear: {x: 0.2}}'
+}}}
+
+   * In Section *12.11.2* (Running the demo) on page 401, the following command is missing the continuation character at the end of the line break.  The command line should be:
+
+{{{
+$ rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/real_pick_and_place.rviz
+}}}
+
+
+
+
+
