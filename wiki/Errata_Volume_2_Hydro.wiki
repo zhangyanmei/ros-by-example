@@ -6,7 +6,7 @@
 $ roslaunch rbx2_bringup pi_robot_with_gripper.launch sim:=true
 }}}
 
-A number of multi-line command examples are missing the continuation character (\) at the end of the first line.  This means copy-and-pasting these lines to your terminal won't work properly.  (The commands themselves are fine, just copy-and-paste is affected.) Here are the relevant commands in a form that can be properly copy-and-pasted:
+A number of multi-line command examples are missing the continuation character (\) at the end of the first line.  The commands themselves are OK but copy-and-pasting these commands to a terminal will not work properly. Here are the relevant commands in a form that can be properly copy-and-pasted:
 
   * *Chapter 2 page 3*:
 
