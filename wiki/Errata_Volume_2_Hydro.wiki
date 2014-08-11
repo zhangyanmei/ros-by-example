@@ -1,4 +1,4 @@
-== RBX Volume 2 Errata for ROS Hydro ==
+ == RBX Volume 2 Errata for ROS Hydro ==
 
  * In Section *4.12.2* (_A fake Pi Robot_) in the first paragraph on page 145, there is a command missing from the text box. The missing command  is:
 
@@ -25,7 +25,7 @@ $ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- 0.0
 }}}
 
 
-  * Section *5.4 page 165 and 166*:
+  * *Section 5.4 page 165 and 166*:
 
 {{{
 $ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- -2.0
@@ -41,6 +41,37 @@ $ rostopic pub -1 /right_arm_shoulder_lift_joint/command std_msgs/Float64 -- 0.0
 $ roslaunch rbx2_bringup pi_robot_head_only.launch sim:=false port:=/dev/ttyUSB1
 }}}
 
+   * *Chapter 8 page 208*:
+
+{{{
+$ rosrun topic_tools mux cmd_vel move_base_cmd_vel joystick_cmd_vel mux:=mux_cmd_vel
+}}}
+
+   * *Section 8.2 page 211*:
+
+{{{
+$ rosrun topic_tools mux cmd_vel move_base_cmd_vel joystick_cmd_vel mux:=mux_cmd_vel
+}}}
+
+   * *Section 9.4.1 page 231*:
+
+{{{
+$ roslaunch rbx2_bringup pi_robot_head_only.launch sim:=false port:=/dev/ttyUSB0
+}}}
+
+
+   * *Section 11.16.2 page 308*:
+
+{{{
+$ rosrun rbx2_dynamixels head_trajectory_demo.py _reset:=true _duration:=10.0
+}}}
+
+   * *Section 11.25 page 354*:
+
+{{{
+$ rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/attached_object.rviz
+}}}
+
   * *Section 11.26 page 357*:
 
 {{{
@@ -53,17 +84,33 @@ $ rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/pick_and_place.rviz
 $ rosrun moveit_ikfast round_collada_numbers.py pi_robot.dae pi_robot_rounded.dae 5
 }}}
 
-  * Section *12.8 page 394:
+  * *Section 12.8 page 394*:
+
+{{{
+$ rostopic pub -r 10 /mobile_base/commands/velocity geometry_msgs/Twist  '{linear: {x: 0.2}}'
+}}}
+
+   * *Section 12.8 page 394*:
 
 {{{
 $ rostopic pub -r 10 /mobile_base/commands/velocity geometry_msgs/Twist '{linear: {x: 0.2}}'
 }}}
 
-   * Section *12.11.2* page 411:
+   * *Section 12.8.1 page 395*:
+
+{{{
+$ rostopic pub -r 10 /mobile_base/commands/velocity geometry_msgs/Twist '{linear: {x: 0.1}}'
+}}}
+
+   * *Section 12.11.2 page 411*:
 
 {{{
 $ rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/real_pick_and_place.rviz
 }}}
 
 
+   * *Section 13.11 page 452*:
 
+{{{
+$ roslaunch rbx2_tasks fake_turtlebot.launch battery_runtime:=900 map:=test_map.yaml
+}}}
