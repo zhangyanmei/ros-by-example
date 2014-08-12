@@ -1,5 +1,7 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
+This errata is for version 1.0 of the book.  These issues have been fixed in version 1.01.
+
  * In Section *4.12.2* (_A fake Pi Robot_) in the first paragraph on page 145, there is a command missing from the text box. The missing command  is:
 
 {{{
