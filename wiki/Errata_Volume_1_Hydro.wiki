@@ -1,13 +1,31 @@
 = Errata for Volume 1 ROS Hydro =
 
-There is a missing step in section *4.7 Mixing catkin and rosbuild Workspaces*.
+  # There is a missing step in section *4.7 Mixing catkin and rosbuild   Workspaces*.
 
-In this section, you are instructed to add the following line to your ~/.bashrc file:
+  In this section, you are instructed to add the following line to your ~/.bashrc file:
 
-`source ~/ros_workspace/setup.bash`
+  `source ~/ros_workspace/setup.bash`
 
-The missing step is that we also need to add the following line right after the above line:
+  The missing step is that we also need to add the following line right after the above line:
 
-`export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH`
+  `export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH`
 
-This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
+  This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
+
+  # Referring to section 10.3.2, "Installing Webcam Drivers", instructions are provided for building Eric Perko's uvc_cam package.  Eric's uvc_cam package still uses rosbuild so for those of you who are or might have trouble running both rosbuild workspace and a catkin work spaces together, I have created a catkinized version of uvc_cam.  Below are the steps for installing it in you your catkin workspace directory.
+
+  NOTE: If you are already successfully using the rosbuild version of the uvc_cam package, there is no need to install the catkinized version.  The actual driver files are identical.
+
+  The following commands assume that your catkin workspace directory is located at ~/catkin_ws.  Substitute the appropriate directory if your location is different.
+
+{{{
+  $ cd ~/catkin_ws/src
+  $ git clone https://github.com/pirobot/uvc_cam.git
+  $ cd uvc_cam
+  $ git checkout hydro-devel
+  $ cd ~/catkin_ws
+  $ catkin_make
+  $ rospack profile
+}}}
+
+  You can then proceed to test your webcam following the instructions in section 10.3.4.
