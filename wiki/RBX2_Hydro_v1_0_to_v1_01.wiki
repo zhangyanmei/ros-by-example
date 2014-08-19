@@ -24,6 +24,6 @@ For example:
 
    `$ bspatch source_file output_file diff_file`
 
- * Bring up the PDF in your favorite PDF reader.  The version number on the inner title page should be 1.01.
+ * Bring up the new PDF in your favorite PDF reader.  The version number on the inner title page should be 1.01.
 
 *NOTE:* For future updates about the ROS By Example books and code, please join the [https://groups.google.com/forum/#%21forum/ros-by-example ros-by-example Google Group] 
