@@ -24,6 +24,8 @@ ros-hydro-robot-pose-publisher ros-hydro-tf2-web-republisher \
 graphviz-dev libgraphviz-dev gv python-scipy
 }}}
 
+ * In Section *3.9.3* the blog posting by Bjoern Knafla mentioned at the end of section no longer exists.
+
 The rest of this errata is for version 1.0 of the book.  These issues have been fixed in version 1.01.
 
  * In Section *4.12.2* (_A fake Pi Robot_) in the first paragraph on page 145, there is a command missing from the text box. The missing command  is:
