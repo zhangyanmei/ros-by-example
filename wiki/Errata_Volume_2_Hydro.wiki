@@ -1,6 +1,30 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
-This errata is for version 1.0 of the book.  These issues have been fixed in version 1.01.
+  * Chapter 2 _Installing the ROS By Example Code_
+
+  There is a space missing in the long command for installing the prerequisite packages.  The missing space means copy-and-pasting the command to a terminal will fail.  The command should be:
+
+{{{
+$ sudo apt-get install ros-hydro-arbotix \
+ros-hydro-dynamixel-motor ros-hydro-rosbridge-suite \
+ros-hydro-mjpeg-server ros-hydro-rgbd-launch \
+ros-hydro-openni-camera ros-hydro-moveit-full \
+ros-hydro-turtlebot-* ros-hydro-kobuki-* ros-hydro-moveit-python \
+python-pygraph python-pygraphviz python-easygui \
+mini-httpd ros-hydro-laser-pipeline ros-hydro-ar-track-alvar \
+ros-hydro-laser-filters ros-hydro-hokuyo-node \
+ros-hydro-depthimage-to-laserscan ros-hydro-moveit-ikfast \
+ros-hydro-gazebo-ros ros-hydro-gazebo-ros-pkgs \
+ros-hydro-gazebo-msgs ros-hydro-gazebo-plugins \
+ros-hydro-gazebo-ros-control ros-hydro-cmake-modules \
+ros-hydro-kobuki-gazebo-plugins ros-hydro-kobuki-gazebo \
+ros-hydro-smach ros-hydro-smach-ros ros-hydro-grasping-msgs \
+ros-hydro-executive-smach ros-hydro-smach-viewer \
+ros-hydro-robot-pose-publisher ros-hydro-tf2-web-republisher \
+graphviz-dev libgraphviz-dev gv python-scipy
+}}}
+
+The rest of this errata is for version 1.0 of the book.  These issues have been fixed in version 1.01.
 
  * In Section *4.12.2* (_A fake Pi Robot_) in the first paragraph on page 145, there is a command missing from the text box. The missing command  is:
 
