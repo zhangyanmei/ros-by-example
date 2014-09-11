@@ -1,5 +1,7 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
+NOTE: The following errata are for book revisions 1.0 and 1.01.  They have been fixed in revision 1.02.  Check the inside title page for the revision number of your copy.
+
   * *Chapter* 2 _Installing the ROS By Example Code_
 
   There is a space missing in the long command for installing the prerequisite packages.  The missing space means copy-and-pasting the command to a terminal will fail.  The command should be:
