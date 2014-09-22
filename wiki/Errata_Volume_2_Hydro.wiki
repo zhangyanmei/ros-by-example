@@ -1,6 +1,6 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
-*NOTE*: The following errata are for book revisions 1.0 and 1.01.  They have been fixed in version 1.02.  Check the inside title page for the revision number of your copy.
+*NOTE*: The following errata are for book revisions 1.0 and 1.01.  They have been *fixed in version 1.02*.  Check the inside title page for the revision number of your copy.
 
   * *Chapter* 2 _Installing the ROS By Example Code_
 
