@@ -23,7 +23,7 @@ ros-hydro-kobuki-gazebo-plugins ros-hydro-kobuki-gazebo \
 ros-hydro-smach ros-hydro-smach-ros ros-hydro-grasping-msgs \
 ros-hydro-executive-smach ros-hydro-smach-viewer \
 ros-hydro-robot-pose-publisher ros-hydro-tf2-web-republisher \
-graphviz-dev libgraphviz-dev gv python-scipy
+graphviz-dev libgraphviz-dev gv python-scipy sdformat
 }}}
 
  * In Section *3.9.3* the blog posting by Bjoern Knafla mentioned at the end of section no longer exists.
