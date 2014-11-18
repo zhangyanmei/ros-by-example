@@ -23,6 +23,7 @@ ros-hydro-kobuki-gazebo-plugins ros-hydro-kobuki-gazebo \
 ros-hydro-smach ros-hydro-smach-ros ros-hydro-grasping-msgs \
 ros-hydro-executive-smach ros-hydro-smach-viewer \
 ros-hydro-robot-pose-publisher ros-hydro-tf2-web-republisher \
+ros-hydro-move-base-msgs \
 graphviz-dev libgraphviz-dev gv python-scipy sdformat
 }}}
 
