@@ -1,12 +1,18 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
-The following
+The following errata are for book revisions *1.02*.  They will be fixed in revision 1.03.
 
-*NOTE*: The following errata are for book revisions 1.0 and 1.01.  They have been *fixed in version 1.02 and above*.  Check the inside title page for the revision number of your copy.
+  * In Section *6.5* page 184, the roslaunch command has a typo (missing the "g" in "bringup").  It should be:
+
+{{{
+$ roslaunch rbx2_bringup laptop_battery.launch
+}}}
+
+The following errata are for book revisions 1.0 and 1.01.  They have been *fixed in version 1.02*.  Check the inside title page for the revision number of your copy.
 
   * *Chapter* 2 _Installing the ROS By Example Code_
 
-  There is a space missing as well as two prerequisites (ros-hydro-move-base-msgs and sdformat) in the long command for installing the prerequisite packages.  The missing space means copy-and-pasting the command to a terminal will fail.  The command should be:
+  There is a space missing in the long command for installing the prerequisite packages.  The missing space means copy-and-pasting the command to a terminal will fail.  The command should be:
 
 {{{
 $ sudo apt-get install ros-hydro-arbotix ros-hydro-move-base-msgs \
