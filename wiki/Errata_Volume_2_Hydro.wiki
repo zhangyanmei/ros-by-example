@@ -1,6 +1,6 @@
  == RBX Volume 2 Errata for ROS Hydro ==
 
-The following errata are for book version *1.02*.  They will be fixed in version 1.03.
+The following errata are for book versions *1.0 - 1.02*.  They will be fixed in version 1.03.
 
   * In Section *6.4* page 181, the laptop_battery.launch file is incorrectly described as including a rate parameter.  The rate is actually fixed in the laptop_battery.py script so the rate parameter has been removed from the launch file and the text updated accordingly.
 
@@ -8,6 +8,17 @@ The following errata are for book version *1.02*.  They will be fixed in version
 
 {{{
 $ roslaunch rbx2_bringup laptop_battery.launch
+}}}
+
+  * In Section *11.8* (Installing MoveIt), the commands shown for installation of the MoveIt source packages are missing the Hydro branch specifier.  The correct commands are:
+
+{{{
+$ cd ~/catkin_ws/src
+$ git clone -b hydro-devel https://github.com/ros-planning/moveit_ros.git
+$ git clone -b hydro-devel https://github.com/ros-planning/moveit_core.git
+$ git clone -b hydro-devel https://github.com/ros-planning/moveit_setup_assistant.git
+$ cd ~/catkin_ws
+$ catkin_make
 }}}
 
 
