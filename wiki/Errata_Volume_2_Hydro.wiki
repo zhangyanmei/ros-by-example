@@ -29,7 +29,7 @@ The following errata are for book revisions *1.0* and *1.01*.  They have been *f
   There is a space missing in the long command for installing the prerequisite packages.  The missing space means copy-and-pasting the command to a terminal will fail.  The command should be:
 
 {{{
-$ sudo apt-get install ros-hydro-arbotix ros-hydro-move-base-msgs \
+$ sudo apt-get install ros-hydro-arbotix \
 ros-hydro-dynamixel-motor ros-hydro-rosbridge-suite \
 ros-hydro-mjpeg-server ros-hydro-rgbd-launch \
 ros-hydro-openni-camera ros-hydro-moveit-full \
@@ -45,6 +45,7 @@ ros-hydro-kobuki-gazebo-plugins ros-hydro-kobuki-gazebo \
 ros-hydro-smach ros-hydro-smach-ros ros-hydro-grasping-msgs \
 ros-hydro-executive-smach ros-hydro-smach-viewer \
 ros-hydro-robot-pose-publisher ros-hydro-tf2-web-republisher \
+ros-hydro-move-base-msgs ros-hydro-fake-localization \
 graphviz-dev libgraphviz-dev gv python-scipy sdformat
 }}}
 
