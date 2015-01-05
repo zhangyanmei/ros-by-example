@@ -1,6 +1,6 @@
 = Errata for Volume 1 ROS Hydro =
 
-  # There is a missing step in section *4.7 Mixing catkin and rosbuild   Workspaces*.
+  * There is a missing step in section *4.7 Mixing catkin and rosbuild   Workspaces*.
 
   In this section, you are instructed to add the following line to your ~/.bashrc file:
 
@@ -12,7 +12,21 @@
 
   This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
 
-  # Referring to section 10.3.2, "Installing Webcam Drivers", instructions are provided for building Eric Perko's uvc_cam package.  Eric's uvc_cam package still uses rosbuild so for those of you who are or might have trouble running both rosbuild workspace and a catkin work spaces together, I have created a catkinized version of uvc_cam.  Below are the steps for installing it in you your catkin workspace directory.
+  * At the end of Section 9.5, it is said that playing built-in sounds with sound_play is not working in Hydro.  Apparently this has been fixed so built-in sounds now work again.  The updated paragraph in Section 9.5 now reads
+
+To hear one of the built-in sounds, use the playbuiltin.py script together with a number from 1 to 5. Turn down your volume for this one!
+
+{{{
+$ rosrun sound_play playbuiltin.py 4
+}}}
+
+I'm not sure when the fix made it into the ROS Hydro Debian packages so you might have to update your Hydro packages if it's been awhile since you have done an update.  Don't forget that to hear the built-in sounds using the command above, you first have to have the main sound_play node running:
+
+{{{
+$ rosrun sound_play soundplay_node.py
+}}}
+
+  * Referring to section 10.3.2, "Installing Webcam Drivers", instructions are provided for building Eric Perko's uvc_cam package.  Eric's uvc_cam package still uses rosbuild so for those of you who are or might have trouble running both rosbuild workspace and a catkin work spaces together, I have created a catkinized version of uvc_cam.  Below are the steps for installing it in you your catkin workspace directory.
 
   NOTE: If you are already successfully using the rosbuild version of the uvc_cam package, there is no need to install the catkinized version.  The actual driver files are identical.
 
