@@ -12,6 +12,17 @@
 
   This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.
 
+  * A bug has been fixed in the fake_amcl.launch and fake_nav_test.launch files described in Sections 8.5.1 and 8.5.4.  Before the update, setting an initialpose for the fake TurtleBot in RViz did not work while running either fake_amcl.launch or fake_nav_test.launch.  The bug has been fixed and you can get the updated files by running the commands:
+
+{{{
+$ roscd rbx1_nav
+$ git pull
+}}}
+
+The updated text for Section 8.5.1 in the book should now read as follows in :
+
+Finally, we fire up the fake_localization node.  As you can read on the fake_localization Wiki page, this node simulates a subset of the ROS amcl API in the case where localization is perfect.  However, we need to set three parameters to make it work with the ArbotiX simulator and our robot's URDF.  First we remap the base_pose_ground_truth topic to the odom topic.  (Some robots use the odom_combined topic if using more than one source of odometry data such as an IMU in addition to wheel encoders.)  When then set the parameter global_frame_id to the map frame and the base_frame_id parameter to base_footprint.  If your robot does not use a base_footprint frame, you would likely set this to base_link instead.
+
   * At the end of Section 9.5, it is said that playing built-in sounds with sound_play is not working in Hydro.  Apparently this has been fixed so built-in sounds now work again.  The updated paragraph in Section 9.5 now reads
 
 To hear one of the built-in sounds, use the playbuiltin.py script together with a number from 1 to 5. Turn down your volume for this one!
