@@ -10,15 +10,22 @@ The following errata are for book versions *1.0 - 1.02*.  They will be fixed in 
 $ roslaunch rbx2_bringup laptop_battery.launch
 }}}
 
-  * In Section *11.8* (Installing MoveIt), the commands shown for installation of the MoveIt source packages are missing the Hydro branch specifier.  The correct commands are:
+  * In Section *11.8* (Installing MoveIt), instructions are provided for installing three MoveIt packages from source to get around a bug in moveit_ros.  As of Feb 7 2015, that bug was fixed in the MoveIt Debian packages so that the source install is no longer necessary.  To install the Debian packages, run the following commands:
+
+{{{
+$ sudo apt-get update
+$ sudo apt-get install ros-hydro-moveit-core ros-hydro-moveit-ros ros-hydro-moveit-setup-assistant
+$ rospack profile
+}}}
+
+If you have already installed the source packages, you can remove them using the following commands:
 
 {{{
 $ cd ~/catkin_ws/src
-$ git clone -b hydro-devel https://github.com/ros-planning/moveit_ros.git
-$ git clone -b hydro-devel https://github.com/ros-planning/moveit_core.git
-$ git clone -b hydro-devel https://github.com/ros-planning/moveit_setup_assistant.git
+$ \rm -rf moveit_core moveit_ros moveit_setup_assistant
 $ cd ~/catkin_ws
 $ catkin_make
+$ rospack profile
 }}}
 
 
